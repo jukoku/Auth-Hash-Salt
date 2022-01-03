@@ -3,9 +3,10 @@ require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const app = express();
 const mongoose = require("mongoose");
-const md5 = require("md5");
+
+const app = express();
+
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
@@ -80,11 +81,6 @@ app.route("/login")
       });
 
     });
-
-
-
-
-
 
     app.listen(3000, function() {
       console.log("Server started on port 3000.");
